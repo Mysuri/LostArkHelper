@@ -9,4 +9,11 @@
         <item name="android:windowBackground">@color/backgroundColor</item>
     </style>
 
+    <!--Style for Splash Screen-->
+    <style name="SplashScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/phoneTopColor</item>
+        <item name="android:windowBackground">@color/backgroundColor</item>
+
+    </style>
+
 </resources>

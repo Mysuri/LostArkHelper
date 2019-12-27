@@ -4,5 +4,6 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="backgroundColor">#171e28</color>
+    <color name="phoneTopColor">#141C24</color>
     <color name="navBarColor">#1D2730</color>
 </resources>
