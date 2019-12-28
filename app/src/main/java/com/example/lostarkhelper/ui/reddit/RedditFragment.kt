@@ -19,10 +19,10 @@ class RedditFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        redditViewModel =
-            ViewModelProviders.of(this).get(RedditViewModel::class.java)
+        redditViewModel = ViewModelProviders.of(this).get(RedditViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_reddit, container, false)
         val textView: TextView = root.findViewById(R.id.text_reddit)
+        redditViewModel.getRandomTrivia()
         redditViewModel.text.observe(this, Observer {
             textView.text = it
         })

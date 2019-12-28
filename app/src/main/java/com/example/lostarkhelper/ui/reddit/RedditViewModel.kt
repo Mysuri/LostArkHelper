@@ -1,8 +1,14 @@
 package com.example.lostarkhelper.ui.reddit
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.lostarkhelper.api.RedditRepository
+import com.example.lostarkhelper.api.Subreddit
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class RedditViewModel : ViewModel() {
 
@@ -10,4 +16,26 @@ class RedditViewModel : ViewModel() {
         value = "This is reddit Fragment"
     }
     val text: LiveData<String> = _text
+
+    private val numbersRepository = RedditRepository()
+    val trivia = MutableLiveData<Subreddit>()
+    val error = MutableLiveData<String>()
+
+    fun getRandomTrivia() {
+        numbersRepository.getSubreddits().enqueue(object : Callback<Subreddit> {
+            override fun onResponse(call: Call<Subreddit>, response: Response<Subreddit>) {
+                if (response.isSuccessful) {
+                    trivia.value = response.body()
+                    Log.e("TEST", response.body().toString())
+                } else {
+                    error.value = "An error occurred: ${response.errorBody().toString()}"
+                }
+            }
+
+            override fun onFailure(call: Call<Subreddit>, t: Throwable) {
+                error.value = t.message
+                Log.e("ERROR", t.message)
+            }
+        })
+    }
 }
