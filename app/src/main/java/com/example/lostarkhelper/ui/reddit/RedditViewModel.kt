@@ -11,8 +11,6 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.text.SimpleDateFormat
 import java.util.*
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-
 
 
 class RedditViewModel : ViewModel() {
@@ -32,7 +30,12 @@ class RedditViewModel : ViewModel() {
                 if (response.isSuccessful) {
                     trivia.value = response.body()
                     Log.e("TEST", response.body()?.data?.children?.get(0)?.data?.title)
-                    Log.e("EPOCH", epoch2DateString("1577572493"))
+                    Log.e("EPOCH",
+                        response.body()?.data?.children?.get(0)?.data?.created_utc?.toLong()?.let {
+                            epoch2DateString(
+                                it
+                            )
+                        })
                 } else {
                     error.value = "An error occurred: ${response.errorBody().toString()}"
                 }
@@ -45,8 +48,8 @@ class RedditViewModel : ViewModel() {
         })
     }
 
-    fun epoch2DateString(epochSeconds : String) : String {
-        val updateDate = Date(Integer.parseInt(epochSeconds) * 1000L)
+    fun epoch2DateString(epochSeconds: Long) : String {
+        val updateDate = Date(Integer.parseInt(epochSeconds.toString()) * 1000L)
         val format = SimpleDateFormat("dd-MM-yyyy HH:mm")
         return format.format(updateDate)
     }
