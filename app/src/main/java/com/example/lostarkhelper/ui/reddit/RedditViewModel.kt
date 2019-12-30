@@ -9,6 +9,11 @@ import com.example.lostarkhelper.api.Subreddit
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.text.SimpleDateFormat
+import java.util.*
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+
+
 
 class RedditViewModel : ViewModel() {
 
@@ -26,7 +31,8 @@ class RedditViewModel : ViewModel() {
             override fun onResponse(call: Call<Subreddit>, response: Response<Subreddit>) {
                 if (response.isSuccessful) {
                     trivia.value = response.body()
-                    Log.e("TEST", response.body().toString())
+                    Log.e("TEST", response.body()?.data?.children?.get(0)?.data?.title)
+                    Log.e("EPOCH", epoch2DateString("1577572493"))
                 } else {
                     error.value = "An error occurred: ${response.errorBody().toString()}"
                 }
@@ -37,5 +43,11 @@ class RedditViewModel : ViewModel() {
                 Log.e("ERROR", t.message)
             }
         })
+    }
+
+    fun epoch2DateString(epochSeconds : String) : String {
+        val updateDate = Date(Integer.parseInt(epochSeconds) * 1000L)
+        val format = SimpleDateFormat("dd-MM-yyyy HH:mm")
+        return format.format(updateDate)
     }
 }
