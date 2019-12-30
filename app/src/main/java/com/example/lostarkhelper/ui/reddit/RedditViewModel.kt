@@ -13,35 +13,45 @@ import retrofit2.Response
 import java.text.SimpleDateFormat
 import java.util.*
 
-
 class RedditViewModel : ViewModel() {
 
     private val numbersRepository = RedditRepository()
 
-    private val _text1 = MutableLiveData<String>().apply {
-    }
-    val text1: LiveData<String> = _text1
-
-    private val _score1 = MutableLiveData<String>().apply {
-    }
-    val score1: LiveData<String> = _score1
-
+    //1st Post
     val error = MutableLiveData<String>()
     val comment1 = MutableLiveData<String>()
     val date1 = MutableLiveData<String>()
+    val score1 = MutableLiveData<String>()
+    val text1 = MutableLiveData<String>()
+
+    //2nd Post
+    val comment2 = MutableLiveData<String>()
+    val date2 = MutableLiveData<String>()
+    val score2 = MutableLiveData<String>()
+    val text2 = MutableLiveData<String>()
 
     fun getRandomTrivia() {
         numbersRepository.getSubreddits().enqueue(object : Callback<Subreddit> {
             override fun onResponse(call: Call<Subreddit>, response: Response<Subreddit>) {
                 if (response.isSuccessful) {
-                    _text1.value = response.body()?.data?.children?.get(0)?.data?.title
-                    _score1.value = response.body()?.data?.children?.get(0)?.data?.score.toString()
+                    text1.value = response.body()?.data?.children?.get(0)?.data?.title
+                    score1.value = response.body()?.data?.children?.get(0)?.data?.score.toString()
                     comment1.value =
                         response.body()?.data?.children?.get(0)?.data?.num_comments.toString()
                     date1.value =
                         response.body()?.data?.children?.get(0)?.data?.created_utc?.toLong()?.let {
                             epochToDate(it)
                         }
+
+                    text2.value = response.body()?.data?.children?.get(1)?.data?.title
+                    score2.value = response.body()?.data?.children?.get(1)?.data?.score.toString()
+                    comment2.value =
+                        response.body()?.data?.children?.get(1)?.data?.num_comments.toString()
+                    date2.value =
+                        response.body()?.data?.children?.get(1)?.data?.created_utc?.toLong()?.let {
+                            epochToDate(it)
+                        }
+
                 } else {
                     error.value = "An error occurred: ${response.errorBody().toString()}"
                 }
