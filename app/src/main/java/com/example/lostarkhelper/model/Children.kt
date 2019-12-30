@@ -1,4 +1,4 @@
-package com.example.lostarkhelper.api
+package com.example.lostarkhelper.model
 
 data class Children(
     val `data`: DataX,

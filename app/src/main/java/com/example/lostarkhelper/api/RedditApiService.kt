@@ -1,5 +1,6 @@
 package com.example.lostarkhelper.api
 
+import com.example.lostarkhelper.model.Subreddit
 import retrofit2.Call
 import retrofit2.http.GET
 

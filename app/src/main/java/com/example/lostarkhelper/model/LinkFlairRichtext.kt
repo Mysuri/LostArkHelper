@@ -1,4 +1,4 @@
-package com.example.lostarkhelper.api
+package com.example.lostarkhelper.model
 
 data class LinkFlairRichtext(
     val e: String,

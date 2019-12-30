@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.lostarkhelper.R
+import kotlinx.android.synthetic.main.fragment_reddit.*
 
 class RedditFragment : Fragment() {
 
@@ -21,10 +22,14 @@ class RedditFragment : Fragment() {
     ): View? {
         redditViewModel = ViewModelProviders.of(this).get(RedditViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_reddit, container, false)
-        val textView: TextView = root.findViewById(R.id.text_reddit)
+        val textView: TextView = root.findViewById(R.id.txtPost1)
         redditViewModel.getRandomTrivia()
-        redditViewModel.text.observe(this, Observer {
+        redditViewModel.text1.observe(this, Observer {
             textView.text = it
+            if (!textView.text.isNullOrEmpty()) {
+                rvPost1.visibility = View.VISIBLE
+                ivLike1.visibility = View.VISIBLE
+            }
         })
         return root
     }
