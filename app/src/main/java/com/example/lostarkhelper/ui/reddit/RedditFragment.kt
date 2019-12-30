@@ -41,6 +41,7 @@ class RedditFragment : Fragment() {
         redditViewModel.error.observe(this, Observer {
             txtError.visibility = View.VISIBLE
             txtError.text = it
+            pbLoading.visibility = View.INVISIBLE
         })
 
         redditViewModel.text1.observe(this, Observer {
@@ -51,6 +52,8 @@ class RedditFragment : Fragment() {
                 tvScore1.visibility = View.VISIBLE
                 ivComment1.visibility = View.VISIBLE
                 tvDate1.visibility = View.VISIBLE
+
+                pbLoading.visibility = View.INVISIBLE
             }
         })
         return root
