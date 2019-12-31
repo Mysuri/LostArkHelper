@@ -14,7 +14,7 @@
     <fragment
         android:id="@+id/navigation_reddit"
         android:name="com.example.lostarkhelper.ui.reddit.RedditFragment"
-        android:label="Latest Posts"
+        android:label="@string/latest_posts"
         tools:layout="@layout/fragment_reddit" />
 
     <fragment

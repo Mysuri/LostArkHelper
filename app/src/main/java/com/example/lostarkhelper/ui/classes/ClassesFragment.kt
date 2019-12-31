@@ -8,15 +8,18 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.lostarkhelper.R
 import android.view.MenuInflater
-
-
-
-
-
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.lostarkhelper.model.Classes
+import kotlinx.android.synthetic.main.fragment_classes.*
 
 class ClassesFragment : Fragment() {
 
     private lateinit var classesViewModel: ClassesViewModel
+
+    private var classes = arrayListOf<Classes>()
+    private var classAdapter = ClassesAdapter(classes)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,28 +29,39 @@ class ClassesFragment : Fragment() {
         setHasOptionsMenu(true)
         classesViewModel = ViewModelProviders.of(this).get(ClassesViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_classes, container, false)
-        val textView: TextView = root.findViewById(R.id.text_classes)
-        classesViewModel.text.observe(this, Observer {
-            textView.text = it
-        })
+
+        //Initialize Recyclerview
+        val rvClasses = root.findViewById(R.id.rvClasses) as RecyclerView
+
+        rvClasses.layoutManager = LinearLayoutManager(activity)
+        rvClasses.adapter = ClassesAdapter(classes)
+
+        for (i in Classes.PLACE_NAMES.indices) {
+            classes.add(Classes(Classes.PLACE_NAMES[i]))
+        }
+
+        classAdapter.notifyDataSetChanged()
+
         return root
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.custom_menu, menu)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
+//TODO : Create action bar menu switch
+
+//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+//        inflater.inflate(R.menu.custom_menu, menu)
+//        super.onCreateOptionsMenu(menu, inflater)
+//    }
 
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_delete -> {
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        return when (item.itemId) {
+//            R.id.action_delete -> {
+//                true
+//            }
+//            else -> super.onOptionsItemSelected(item)
+//        }
+//    }
 }
