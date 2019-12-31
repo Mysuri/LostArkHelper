@@ -16,9 +16,9 @@ import java.util.*
 class RedditViewModel : ViewModel() {
 
     private val numbersRepository = RedditRepository()
+    val error = MutableLiveData<String>()
 
     //1st Post
-    val error = MutableLiveData<String>()
     val comment1 = MutableLiveData<String>()
     val date1 = MutableLiveData<String>()
     val score1 = MutableLiveData<String>()
@@ -30,7 +30,25 @@ class RedditViewModel : ViewModel() {
     val score2 = MutableLiveData<String>()
     val text2 = MutableLiveData<String>()
 
-    fun getRandomTrivia() {
+    //3rd Post
+    val comment3 = MutableLiveData<String>()
+    val date3 = MutableLiveData<String>()
+    val score3 = MutableLiveData<String>()
+    val text3 = MutableLiveData<String>()
+
+    //4th Post
+    val comment4 = MutableLiveData<String>()
+    val date4 = MutableLiveData<String>()
+    val score4 = MutableLiveData<String>()
+    val text4 = MutableLiveData<String>()
+
+    //5th Post
+    val comment5 = MutableLiveData<String>()
+    val date5 = MutableLiveData<String>()
+    val score5 = MutableLiveData<String>()
+    val text5 = MutableLiveData<String>()
+
+    fun getSubredditInfo() {
         numbersRepository.getSubreddits().enqueue(object : Callback<Subreddit> {
             override fun onResponse(call: Call<Subreddit>, response: Response<Subreddit>) {
                 if (response.isSuccessful) {
@@ -52,6 +70,32 @@ class RedditViewModel : ViewModel() {
                             epochToDate(it)
                         }
 
+                    text3.value = response.body()?.data?.children?.get(2)?.data?.title
+                    score3.value = response.body()?.data?.children?.get(2)?.data?.score.toString()
+                    comment3.value =
+                        response.body()?.data?.children?.get(2)?.data?.num_comments.toString()
+                    date3.value =
+                        response.body()?.data?.children?.get(2)?.data?.created_utc?.toLong()?.let {
+                            epochToDate(it)
+                        }
+
+                    text4.value = response.body()?.data?.children?.get(3)?.data?.title
+                    score4.value = response.body()?.data?.children?.get(3)?.data?.score.toString()
+                    comment4.value =
+                        response.body()?.data?.children?.get(3)?.data?.num_comments.toString()
+                    date4.value =
+                        response.body()?.data?.children?.get(3)?.data?.created_utc?.toLong()?.let {
+                            epochToDate(it)
+                        }
+
+                    text5.value = response.body()?.data?.children?.get(4)?.data?.title
+                    score5.value = response.body()?.data?.children?.get(4)?.data?.score.toString()
+                    comment5.value =
+                        response.body()?.data?.children?.get(4)?.data?.num_comments.toString()
+                    date5.value =
+                        response.body()?.data?.children?.get(4)?.data?.created_utc?.toLong()?.let {
+                            epochToDate(it)
+                        }
                 } else {
                     error.value = "An error occurred: ${response.errorBody().toString()}"
                 }

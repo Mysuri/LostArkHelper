@@ -6,7 +6,7 @@ import retrofit2.http.GET
 
 interface RedditApiService {
 
-    // The GET method needed to retrieve a random number trivia.
-    @GET("new.json?limit=2&sort=new")
+    // The GET method needed to retrieve the 5 newest subreddit posts
+    @GET("new.json?limit=5&sort=new")
     fun getSubredditInfo(): Call<Subreddit>
 }

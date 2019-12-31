@@ -1,202 +1,458 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingBottom="75dp">
 
-    <View
-        android:id="@+id/rvPost2"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/reddit_rectangle"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvPost1" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvDate2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        android:textColor="#FFFFFF"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/rvPost2"
-        app:layout_constraintEnd_toEndOf="@+id/rvPost2" />
+        <View
+            android:id="@+id/rvPost5"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/reddit_rectangle"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvPost4" />
 
-    <TextView
-        android:id="@+id/tvComment2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="8dp"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/rvPost2"
-        app:layout_constraintStart_toEndOf="@+id/ivComment2" />
+        <TextView
+            android:id="@+id/tvDate5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#FFFFFF"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost5"
+            app:layout_constraintEnd_toEndOf="@+id/rvPost5" />
 
-    <ImageView
-        android:id="@+id/ivComment2"
-        android:layout_width="25dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/ic_mode_comment_white_24dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/rvPost2"
-        app:layout_constraintStart_toEndOf="@+id/tvScore2" />
+        <TextView
+            android:id="@+id/tvComment5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost5"
+            app:layout_constraintStart_toEndOf="@+id/ivComment5" />
 
-    <TextView
-        android:id="@+id/tvScore2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/alegreya_sans_sc"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/rvPost2"
-        app:layout_constraintStart_toEndOf="@+id/ivLike2" />
+        <ImageView
+            android:id="@+id/ivComment5"
+            android:layout_width="25dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_mode_comment_white_24dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost5"
+            app:layout_constraintStart_toEndOf="@+id/tvScore5" />
 
-    <ImageView
-        android:id="@+id/ivLike2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/ic_thumb_up_white_24dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/rvPost2"
-        app:layout_constraintStart_toStartOf="@+id/rvPost2" />
+        <TextView
+            android:id="@+id/tvScore5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/alegreya_sans_sc"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost5"
+            app:layout_constraintStart_toEndOf="@+id/ivLike5" />
 
-    <TextView
-        android:id="@+id/tvPost2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/alegreya_sans_sc"
-        android:textColor="#FFFFFF"
-        android:textSize="21sp"
-        app:layout_constraintEnd_toEndOf="@+id/rvPost2"
-        app:layout_constraintStart_toStartOf="@+id/rvPost2"
-        app:layout_constraintTop_toTopOf="@+id/rvPost2" />
+        <ImageView
+            android:id="@+id/ivLike5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_thumb_up_white_24dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost5"
+            app:layout_constraintStart_toStartOf="@+id/rvPost5" />
 
-    <View
-        android:id="@+id/rvPost1"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/reddit_rectangle"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tvPost5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/alegreya_sans_sc"
+            android:textColor="#FFFFFF"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="@+id/rvPost5"
+            app:layout_constraintStart_toStartOf="@+id/rvPost5"
+            app:layout_constraintTop_toTopOf="@+id/rvPost5" />
 
-    <TextView
-        android:id="@+id/txtError"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="128dp"
-        android:text="@string/no_internet"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/rvPost4"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/reddit_rectangle"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvPost3" />
 
-    <TextView
-        android:id="@+id/tvPost1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/alegreya_sans_sc"
-        android:textColor="#FFFFFF"
-        android:textSize="21sp"
-        app:layout_constraintEnd_toEndOf="@+id/rvPost1"
-        app:layout_constraintStart_toStartOf="@+id/rvPost1"
-        app:layout_constraintTop_toTopOf="@+id/rvPost1" />
+        <TextView
+            android:id="@+id/tvComment4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost4"
+            app:layout_constraintStart_toEndOf="@+id/ivComment4" />
 
-    <ImageView
-        android:id="@+id/ivLike1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/ic_thumb_up_white_24dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/rvPost1"
-        app:layout_constraintStart_toStartOf="@+id/rvPost1" />
+        <TextView
+            android:id="@+id/tvDate4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#FFFFFF"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost4"
+            app:layout_constraintEnd_toEndOf="@+id/rvPost4" />
 
-    <TextView
-        android:id="@+id/tvScore1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/alegreya_sans_sc"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/rvPost1"
-        app:layout_constraintStart_toEndOf="@+id/ivLike1" />
+        <ImageView
+            android:id="@+id/ivComment4"
+            android:layout_width="25dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_mode_comment_white_24dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost4"
+            app:layout_constraintStart_toEndOf="@+id/tvScore4" />
 
-    <ImageView
-        android:id="@+id/ivComment1"
-        android:layout_width="25dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/ic_mode_comment_white_24dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/rvPost1"
-        app:layout_constraintStart_toEndOf="@+id/tvScore1" />
+        <TextView
+            android:id="@+id/tvScore4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/alegreya_sans_sc"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost4"
+            app:layout_constraintStart_toEndOf="@+id/ivLike4" />
 
-    <TextView
-        android:id="@+id/tvComment1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="8dp"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/rvPost1"
-        app:layout_constraintStart_toEndOf="@+id/ivComment1" />
+        <ImageView
+            android:id="@+id/ivLike4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_thumb_up_white_24dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost4"
+            app:layout_constraintStart_toStartOf="@+id/rvPost4" />
 
-    <TextView
-        android:id="@+id/tvDate1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        android:textColor="#FFFFFF"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/rvPost1"
-        app:layout_constraintEnd_toEndOf="@+id/rvPost1" />
+        <TextView
+            android:id="@+id/tvPost4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/alegreya_sans_sc"
+            android:textColor="#FFFFFF"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="@+id/rvPost4"
+            app:layout_constraintStart_toStartOf="@+id/rvPost4"
+            app:layout_constraintTop_toTopOf="@+id/rvPost4" />
 
-    <ProgressBar
-        android:id="@+id/pbLoading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="128dp"
-        android:indeterminate="true"
-        android:indeterminateTint="#009688"
-        android:indeterminateTintMode="src_in"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/rvPost3"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/reddit_rectangle"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvPost2" />
+
+        <TextView
+            android:id="@+id/tvDate3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#FFFFFF"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost3"
+            app:layout_constraintEnd_toEndOf="@+id/rvPost3" />
+
+        <TextView
+            android:id="@+id/tvComment3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost3"
+            app:layout_constraintStart_toEndOf="@+id/ivComment3" />
+
+        <ImageView
+            android:id="@+id/ivComment3"
+            android:layout_width="25dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_mode_comment_white_24dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost3"
+            app:layout_constraintStart_toEndOf="@+id/tvScore3" />
+
+        <TextView
+            android:id="@+id/tvScore3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/alegreya_sans_sc"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost3"
+            app:layout_constraintStart_toEndOf="@+id/ivLike3" />
+
+        <ImageView
+            android:id="@+id/ivLike3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_thumb_up_white_24dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost3"
+            app:layout_constraintStart_toStartOf="@+id/rvPost3" />
+
+        <TextView
+            android:id="@+id/tvPost3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/alegreya_sans_sc"
+            android:textColor="#FFFFFF"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="@+id/rvPost3"
+            app:layout_constraintStart_toStartOf="@+id/rvPost3"
+            app:layout_constraintTop_toTopOf="@+id/rvPost3" />
+
+        <View
+            android:id="@+id/rvPost2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/reddit_rectangle"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvPost1" />
+
+        <TextView
+            android:id="@+id/tvDate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#FFFFFF"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost2"
+            app:layout_constraintEnd_toEndOf="@+id/rvPost2" />
+
+        <TextView
+            android:id="@+id/tvComment2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost2"
+            app:layout_constraintStart_toEndOf="@+id/ivComment2" />
+
+        <ImageView
+            android:id="@+id/ivComment2"
+            android:layout_width="25dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_mode_comment_white_24dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost2"
+            app:layout_constraintStart_toEndOf="@+id/tvScore2" />
+
+        <TextView
+            android:id="@+id/tvScore2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/alegreya_sans_sc"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost2"
+            app:layout_constraintStart_toEndOf="@+id/ivLike2" />
+
+        <ImageView
+            android:id="@+id/ivLike2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_thumb_up_white_24dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost2"
+            app:layout_constraintStart_toStartOf="@+id/rvPost2" />
+
+        <TextView
+            android:id="@+id/tvPost2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/alegreya_sans_sc"
+            android:textColor="#FFFFFF"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="@+id/rvPost2"
+            app:layout_constraintStart_toStartOf="@+id/rvPost2"
+            app:layout_constraintTop_toTopOf="@+id/rvPost2" />
+
+        <View
+            android:id="@+id/rvPost1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/reddit_rectangle"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="128dp"
+            android:text="@string/no_internet"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPost1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/alegreya_sans_sc"
+            android:textColor="#FFFFFF"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="@+id/rvPost1"
+            app:layout_constraintStart_toStartOf="@+id/rvPost1"
+            app:layout_constraintTop_toTopOf="@+id/rvPost1" />
+
+        <ImageView
+            android:id="@+id/ivLike1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_thumb_up_white_24dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost1"
+            app:layout_constraintStart_toStartOf="@+id/rvPost1" />
+
+        <TextView
+            android:id="@+id/tvScore1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/alegreya_sans_sc"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost1"
+            app:layout_constraintStart_toEndOf="@+id/ivLike1" />
+
+        <ImageView
+            android:id="@+id/ivComment1"
+            android:layout_width="25dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_mode_comment_white_24dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost1"
+            app:layout_constraintStart_toEndOf="@+id/tvScore1" />
+
+        <TextView
+            android:id="@+id/tvComment1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost1"
+            app:layout_constraintStart_toEndOf="@+id/ivComment1" />
+
+        <TextView
+            android:id="@+id/tvDate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#FFFFFF"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPost1"
+            app:layout_constraintEnd_toEndOf="@+id/rvPost1" />
+
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="128dp"
+            android:indeterminate="true"
+            android:indeterminateTint="#009688"
+            android:indeterminateTintMode="src_in"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -26,7 +26,7 @@ class RedditApi {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
 
-            // Return the Retrofit NumbersApiService
+            // Return the Retrofit RedditApiService
             return numbersApi.create(RedditApiService::class.java)
         }
     }
