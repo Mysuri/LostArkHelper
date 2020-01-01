@@ -37,7 +37,7 @@ class ClassesFragment : Fragment() {
         rvClasses.adapter = ClassesAdapter(classes)
 
         for (i in Classes.PLACE_NAMES.indices) {
-            classes.add(Classes(Classes.PLACE_NAMES[i]))
+            classes.add(Classes(Classes.PLACE_NAMES[i], Classes.PLACE_RES_DRAWABLE_IDS[i]))
         }
 
         classAdapter.notifyDataSetChanged()

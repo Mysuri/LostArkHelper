@@ -1,11 +1,9 @@
 package com.example.lostarkhelper.ui.classes
 
 import android.content.Context
-import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lostarkhelper.R
 import com.example.lostarkhelper.model.Classes
@@ -34,7 +32,8 @@ class ClassesAdapter(private val classes: List<Classes>) :
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(place : Classes) {
-            itemView.className.text = place.name
+            itemView.ivPi.setImageDrawable(context.getDrawable(place.imageResId))
+            itemView.tvClassName.text = place.name
         }
     }
 }

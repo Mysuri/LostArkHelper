@@ -1,40 +1,42 @@
 package com.example.lostarkhelper.model
 
-data class Classes (  var name: String
+import androidx.annotation.DrawableRes
+import com.example.lostarkhelper.R
+
+data class Classes(
+    var name: String,
+    @DrawableRes var imageResId: Int
 ) {
     companion object {
         val PLACE_NAMES = arrayOf(
-            "Amsterdam Dam",
-            "Amsterdam Weesperplein",
-            "Rotterdam Euromast",
-            "Den Haag Binnenhof",
-            "Utrecht Dom",
-            "Groningen Martinitoren",
-            "Maastricht Vrijthof",
-            "New York Vrijheidsbeeld",
-            "San Francisco Golden Gate",
-            "Yellowstone Old Faithful",
-            "Yosemite Half Dome",
-            "Washington White House",
-            "Ottawa Parliament Hill",
-            "Londen Tower Bridge",
-            "Brussel Manneken Pis",
-            "Berlijn Reichstag",
-            "Parijs Eiffeltoren",
-            "Barcelona Sagrada Familia",
-            "Rome Colosseum",
-            "Pompeii",
-            "Kopenhagen",
-            "Oslo",
-            "Stockholm",
-            "Helsinki",
-            "Moskou Rode Plein",
-            "Beijing Verboden Stad",
-            "Kaapstad Tafelberg",
-            "Rio de Janeiro Copacabana",
-            "Sydney Opera",
-            "Hawaii Honolulu",
-            "Alaska Denali"
+            "Berserker",
+            "Destroyer",
+            "Warlord",
+            "Battle Master",
+            "Infighter",
+            "Soul Master",
+            "Blaster",
+            "Devil Hunter",
+            "Hawkeye ",
+            "Arcana",
+            "Bard",
+            "Summoner"
+        )
+
+        val PLACE_RES_DRAWABLE_IDS = arrayOf(
+            R.drawable.class_berserker,
+            R.drawable.class_destroyer,
+            R.drawable.class_warlord,
+            R.drawable.class_battlemaster,
+            R.drawable.class_infighter,
+            R.drawable.class_soulmaster,
+            R.drawable.class_blaster,
+            R.drawable.class_devilhunter,
+            R.drawable.class_hawkeye,
+            R.drawable.class_arcana,
+            R.drawable.class_bard,
+            R.drawable.class_summoner
+
         )
     }
 }
