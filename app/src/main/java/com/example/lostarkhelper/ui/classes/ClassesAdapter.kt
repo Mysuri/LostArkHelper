@@ -23,7 +23,7 @@ class ClassesAdapter(private val classes: List<Classes>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(classes[position])
-        holder.setOnCusomItemClickListener(object : CustomItemClickListener {
+        holder.setOnCustomItemClickListener(object : CustomItemClickListener {
             override fun onCustomItemClickListener(view: View, position: Int) {
                 if (position == 0) {
                     context.startActivity(Intent(context, BerserkerActivity::class.java))
@@ -56,7 +56,7 @@ class ClassesAdapter(private val classes: List<Classes>) :
             itemView.tvClassName.text = place.name
         }
 
-        fun setOnCusomItemClickListener(itemClickListener: CustomItemClickListener) {
+        fun setOnCustomItemClickListener(itemClickListener: CustomItemClickListener) {
             this.customItemClickListener = itemClickListener
         }
 
