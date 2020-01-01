@@ -8,9 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.lostarkhelper.R
 import android.view.MenuInflater
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import androidx.recyclerview.widget.*
 import com.example.lostarkhelper.model.Classes
 import kotlinx.android.synthetic.main.fragment_classes.*
 
@@ -33,8 +31,11 @@ class ClassesFragment : Fragment() {
         //Initialize Recyclerview
         val rvClasses = root.findViewById(R.id.rvClasses) as RecyclerView
 
-        rvClasses.layoutManager = LinearLayoutManager(activity)
+        rvClasses.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         rvClasses.adapter = ClassesAdapter(classes)
+
+        val snapHelper : SnapHelper = LinearSnapHelper()
+        snapHelper.attachToRecyclerView(rvClasses)
 
         for (i in Classes.PLACE_NAMES.indices) {
             classes.add(Classes(Classes.PLACE_NAMES[i], Classes.PLACE_RES_DRAWABLE_IDS[i]))
