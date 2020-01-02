@@ -9,7 +9,7 @@ import com.example.lostarkhelper.R
 import com.example.lostarkhelper.adapter.SkillAdapter
 import com.example.lostarkhelper.model.ClassSkills
 
-class BerserkerActivity : AppCompatActivity() {
+class SkillActivity : AppCompatActivity() {
 
     private var skills = arrayListOf<ClassSkills>()
     private var berserkerAdapter = SkillAdapter(skills)
@@ -47,12 +47,12 @@ class BerserkerActivity : AppCompatActivity() {
                     )
                 )
             }
-            "Destroyer" -> for (i in ClassSkills.BERSERKER_SKILL_NAMES.indices) {
+            "Destroyer" -> for (i in ClassSkills.DESTROYER_SKILL_NAMES.indices) {
                 skills.add(
                     ClassSkills(
-                        ClassSkills.BERSERKER_SKILL_NAMES[i],
-                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
-                        ClassSkills.BERSERKER_SKILL_IMAGES[i]
+                        ClassSkills.DESTROYER_SKILL_NAMES[i],
+                        ClassSkills.DESTROYER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.DESTROYER_SKILL_IMAGES[i]
                     )
                 )
             }

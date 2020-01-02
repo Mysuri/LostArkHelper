@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.lostarkhelper.ui.BerserkerActivity
+import com.example.lostarkhelper.ui.SkillActivity
 import com.example.lostarkhelper.R
 import com.example.lostarkhelper.model.Classes
 import com.example.lostarkhelper.ui.classes.CustomItemClickListener
@@ -26,7 +26,7 @@ class ClassesAdapter(private val classes: ArrayList<Classes>) :
 
         holder.setOnCustomItemClickListener(object : CustomItemClickListener {
             override fun onCustomItemClickListener(view: View, position: Int) {
-                val intent = Intent(context, BerserkerActivity::class.java)
+                val intent = Intent(context, SkillActivity::class.java)
                 intent.putExtra("className", classes[position].name)
                 context.startActivity(intent)
             }
