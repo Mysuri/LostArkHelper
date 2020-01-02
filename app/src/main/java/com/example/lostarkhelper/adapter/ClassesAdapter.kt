@@ -1,4 +1,4 @@
-package com.example.lostarkhelper.ui.classes
+package com.example.lostarkhelper.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -7,12 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.lostarkhelper.BerserkerActivity
+import com.example.lostarkhelper.ui.BerserkerActivity
 import com.example.lostarkhelper.R
 import com.example.lostarkhelper.model.Classes
+import com.example.lostarkhelper.ui.classes.CustomItemClickListener
 import kotlinx.android.synthetic.main.row_class.view.*
 
-class ClassesAdapter(private val classes: List<Classes>) :
+class ClassesAdapter(private val classes: ArrayList<Classes>) :
     RecyclerView.Adapter<ClassesAdapter.ViewHolder>() {
 
     lateinit var context: Context
@@ -23,7 +24,8 @@ class ClassesAdapter(private val classes: List<Classes>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(classes[position])
-        holder.setOnCustomItemClickListener(object : CustomItemClickListener {
+        holder.setOnCustomItemClickListener(object :
+            CustomItemClickListener {
             override fun onCustomItemClickListener(view: View, position: Int) {
                 if (position == 0) {
                     context.startActivity(Intent(context, BerserkerActivity::class.java))

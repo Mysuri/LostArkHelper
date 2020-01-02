@@ -7,4 +7,6 @@
     <color name="classColor">#090D11</color>
     <color name="phoneTopColor">#141C24</color>
     <color name="navBarColor">#1D2730</color>
+    <color name="skillDescColor">#5F5F63</color>
+
 </resources>

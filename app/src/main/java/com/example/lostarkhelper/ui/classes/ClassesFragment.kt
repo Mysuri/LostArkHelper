@@ -2,15 +2,13 @@ package com.example.lostarkhelper.ui.classes
 
 import android.os.Bundle
 import android.view.*
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.lostarkhelper.R
 import android.view.MenuInflater
 import androidx.recyclerview.widget.*
+import com.example.lostarkhelper.adapter.ClassesAdapter
 import com.example.lostarkhelper.model.Classes
-import kotlinx.android.synthetic.main.fragment_classes.*
 
 class ClassesFragment : Fragment() {
 

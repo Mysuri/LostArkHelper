@@ -1,9 +1,11 @@
-package com.example.lostarkhelper
+package com.example.lostarkhelper.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.example.lostarkhelper.MainActivity
+import com.example.lostarkhelper.R
 
 class SplashActivity : AppCompatActivity() {
 
