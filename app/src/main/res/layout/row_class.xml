@@ -14,7 +14,7 @@
     android:elevation="10dp">
 
     <ImageView
-        android:id="@+id/ivPi"
+        android:id="@+id/ivClass"
         android:layout_width="301dp"
         android:layout_height="344dp"
         android:layout_marginBottom="80dp"
@@ -35,5 +35,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivPi" />
+        app:layout_constraintTop_toBottomOf="@+id/ivClass" />
 </androidx.constraintlayout.widget.ConstraintLayout>

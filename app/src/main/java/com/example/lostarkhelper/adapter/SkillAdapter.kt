@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lostarkhelper.R
-import com.example.lostarkhelper.model.BerserkerSkills
+import com.example.lostarkhelper.model.ClassSkills
 import com.example.lostarkhelper.ui.classes.CustomItemClickListener
 import kotlinx.android.synthetic.main.row_skill.view.*
 
-class BerserkerAdapter(private val skills: List<BerserkerSkills>) :
-    RecyclerView.Adapter<BerserkerAdapter.ViewHolder>() {
+class SkillAdapter(private val skills: List<ClassSkills>) :
+    RecyclerView.Adapter<SkillAdapter.ViewHolder>() {
 
     lateinit var context: Context
 
@@ -45,7 +45,7 @@ class BerserkerAdapter(private val skills: List<BerserkerSkills>) :
         }
 
         private var customItemClickListener: CustomItemClickListener? = null
-        fun bind(place: BerserkerSkills) {
+        fun bind(place: ClassSkills) {
             itemView.ivSkill.setImageDrawable(context.getDrawable(place.imageResId))
             itemView.tvSkillTitle.text = place.skillTitle
             itemView.tvSkillDesc.text = place.skillDesc

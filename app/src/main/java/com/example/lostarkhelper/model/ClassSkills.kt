@@ -3,7 +3,7 @@ package com.example.lostarkhelper.model
 import androidx.annotation.DrawableRes
 import com.example.lostarkhelper.R
 
-data class BerserkerSkills (
+data class ClassSkills (
     var skillTitle : String,
     var skillDesc : String,
     @DrawableRes var imageResId : Int

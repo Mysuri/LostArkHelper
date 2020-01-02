@@ -6,17 +6,17 @@ import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lostarkhelper.R
-import com.example.lostarkhelper.adapter.BerserkerAdapter
-import com.example.lostarkhelper.model.BerserkerSkills
+import com.example.lostarkhelper.adapter.SkillAdapter
+import com.example.lostarkhelper.model.ClassSkills
 
 class BerserkerActivity : AppCompatActivity() {
 
-    private var skills = arrayListOf<BerserkerSkills>()
-    private var berserkerAdapter = BerserkerAdapter(skills)
+    private var skills = arrayListOf<ClassSkills>()
+    private var berserkerAdapter = SkillAdapter(skills)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_berserker)
+        setContentView(R.layout.activity_skills)
         val actionBar = supportActionBar
         val className = intent.getStringExtra("className")
 
@@ -31,14 +31,14 @@ class BerserkerActivity : AppCompatActivity() {
         }
 
         //Initialize Recyclerview
-        val rvBerserkerSkills = findViewById<RecyclerView>(R.id.rvBerserkerSkills)
+        val rvClassSkills = findViewById<RecyclerView>(R.id.rvClassSkills)
 
-        rvBerserkerSkills.layoutManager = LinearLayoutManager(this)
-        rvBerserkerSkills.adapter = BerserkerAdapter(skills)
+        rvClassSkills.layoutManager = LinearLayoutManager(this)
+        rvClassSkills.adapter = SkillAdapter(skills)
 
 
-        for (i in BerserkerSkills.SKILL_NAMES.indices) {
-            skills.add(BerserkerSkills(BerserkerSkills.SKILL_NAMES[i], BerserkerSkills.SKILL_DESCRIPTIONS[i], BerserkerSkills.SKILL_IMAGES[i]))
+        for (i in ClassSkills.SKILL_NAMES.indices) {
+            skills.add(ClassSkills(ClassSkills.SKILL_NAMES[i], ClassSkills.SKILL_DESCRIPTIONS[i], ClassSkills.SKILL_IMAGES[i]))
         }
 
         berserkerAdapter.notifyDataSetChanged()
