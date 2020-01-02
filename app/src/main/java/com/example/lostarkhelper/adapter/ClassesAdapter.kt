@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.lostarkhelper.ui.SkillActivity
 import com.example.lostarkhelper.R
 import com.example.lostarkhelper.model.Classes
-import com.example.lostarkhelper.ui.classes.CustomItemClickListener
+import com.example.lostarkhelper.util.CustomItemClickListener
 import kotlinx.android.synthetic.main.row_class.view.*
 
 class ClassesAdapter(private val classes: ArrayList<Classes>) :
@@ -24,7 +24,8 @@ class ClassesAdapter(private val classes: ArrayList<Classes>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(classes[position])
 
-        holder.setOnCustomItemClickListener(object : CustomItemClickListener {
+        holder.setOnCustomItemClickListener(object :
+            CustomItemClickListener {
             override fun onCustomItemClickListener(view: View, position: Int) {
                 val intent = Intent(context, SkillActivity::class.java)
                 intent.putExtra("className", classes[position].name)

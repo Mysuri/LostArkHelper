@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lostarkhelper.R
 import com.example.lostarkhelper.model.ClassSkills
-import com.example.lostarkhelper.ui.classes.CustomItemClickListener
+import com.example.lostarkhelper.util.CustomItemClickListener
 import kotlinx.android.synthetic.main.row_skill.view.*
 
 class SkillAdapter(private val skills: List<ClassSkills>) :

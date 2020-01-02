@@ -1,4 +1,4 @@
-package com.example.lostarkhelper.ui.classes
+package com.example.lostarkhelper.util
 
 import android.view.View
 
