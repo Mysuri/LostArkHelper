@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lostarkhelper.ui.BerserkerActivity
 import com.example.lostarkhelper.R
@@ -27,13 +28,18 @@ class ClassesAdapter(private val classes: ArrayList<Classes>) :
         holder.setOnCustomItemClickListener(object :
             CustomItemClickListener {
             override fun onCustomItemClickListener(view: View, position: Int) {
-                if (position == 0) {
-                    context.startActivity(Intent(context, BerserkerActivity::class.java))
-                    Toast.makeText(context, "CLICKED: Berserker", Toast.LENGTH_LONG).show()
-                } else if (position == 1) {
-                    Toast.makeText(context, "CLICKED: Destroyer", Toast.LENGTH_LONG).show()
 
-                }
+                val intent = Intent(context, BerserkerActivity::class.java)
+                intent.putExtra("className", classes[position].name)
+                context.startActivity(intent)
+
+//                if (position == 0) {
+//                    context.startActivity(Intent(context, classes[position].name::class.java))
+//                    Toast.makeText(context, "CLICKED: " + classes[position].name, Toast.LENGTH_LONG).show()
+//                } else if (position == 1) {
+//                    Toast.makeText(context, "CLICKED: Destroyer", Toast.LENGTH_LONG).show()
+//
+//                }
             }
         })
     }

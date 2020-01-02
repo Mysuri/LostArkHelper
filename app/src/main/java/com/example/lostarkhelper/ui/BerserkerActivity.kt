@@ -18,8 +18,14 @@ class BerserkerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_berserker)
         val actionBar = supportActionBar
+        val className = intent.getStringExtra("className")
+
+        if (className == null) {
+            finish()
+            return
+        }
         if (actionBar != null) {
-            actionBar.title = resources.getString(R.string.class_berserker)
+            actionBar.title = className
             //Back button
             actionBar.setDisplayHomeAsUpEnabled(true)
         }
