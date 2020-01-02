@@ -1,6 +1,9 @@
 package com.example.lostarkhelper.ui.reddit
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -73,10 +76,17 @@ class RedditFragment : Fragment() {
         redditViewModel.comment1.observe(this, Observer {
             tvComment1.text = it
         })
+        redditViewModel.url1.observe(this, Observer {
+            var url1 = it
+            rvPost1.setOnClickListener {
+                val i = Intent(Intent.ACTION_VIEW, Uri.parse(url1))
+                startActivity(i)
+            }
+        })
+
         redditViewModel.date1.observe(this, Observer {
             tvDate1.text = it
         })
-
         redditViewModel.score2.observe(this, Observer {
             tvScore2.text = it
         })
@@ -88,6 +98,13 @@ class RedditFragment : Fragment() {
         })
         redditViewModel.text2.observe(this, Observer {
             tvPost2.text = it
+        })
+        redditViewModel.url2.observe(this, Observer {
+            var url2 = it
+            rvPost2.setOnClickListener {
+                val i = Intent(Intent.ACTION_VIEW, Uri.parse(url2))
+                startActivity(i)
+            }
         })
 
         redditViewModel.score3.observe(this, Observer {
@@ -102,6 +119,13 @@ class RedditFragment : Fragment() {
         redditViewModel.text3.observe(this, Observer {
             tvPost3.text = it
         })
+        redditViewModel.url3.observe(this, Observer {
+            var url3 = it
+            rvPost3.setOnClickListener {
+                val i = Intent(Intent.ACTION_VIEW, Uri.parse(url3))
+                startActivity(i)
+            }
+        })
 
         redditViewModel.score4.observe(this, Observer {
             tvScore4.text = it
@@ -114,6 +138,13 @@ class RedditFragment : Fragment() {
         })
         redditViewModel.text4.observe(this, Observer {
             tvPost4.text = it
+        })
+        redditViewModel.url4.observe(this, Observer {
+            var url4 = it
+            rvPost4.setOnClickListener {
+                val i = Intent(Intent.ACTION_VIEW, Uri.parse(url4))
+                startActivity(i)
+            }
         })
 
         redditViewModel.score5.observe(this, Observer {
@@ -128,6 +159,14 @@ class RedditFragment : Fragment() {
         redditViewModel.text5.observe(this, Observer {
             tvPost5.text = it
         })
+        redditViewModel.url5.observe(this, Observer {
+            var url5 = it
+            rvPost5.setOnClickListener {
+                val i = Intent(Intent.ACTION_VIEW, Uri.parse(url5))
+                startActivity(i)
+            }
+        })
+
         return root
     }
 }

@@ -1,10 +1,7 @@
 package com.example.lostarkhelper.ui.reddit
 
-import android.util.Log
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.lostarkhelper.R
 import com.example.lostarkhelper.api.RedditRepository
 import com.example.lostarkhelper.model.Subreddit
 import retrofit2.Call
@@ -23,30 +20,35 @@ class RedditViewModel : ViewModel() {
     val date1 = MutableLiveData<String>()
     val score1 = MutableLiveData<String>()
     val text1 = MutableLiveData<String>()
+    val url1 = MutableLiveData<String>()
 
     //2nd Post
     val comment2 = MutableLiveData<String>()
     val date2 = MutableLiveData<String>()
     val score2 = MutableLiveData<String>()
     val text2 = MutableLiveData<String>()
+    val url2 = MutableLiveData<String>()
 
     //3rd Post
     val comment3 = MutableLiveData<String>()
     val date3 = MutableLiveData<String>()
     val score3 = MutableLiveData<String>()
     val text3 = MutableLiveData<String>()
+    val url3 = MutableLiveData<String>()
 
     //4th Post
     val comment4 = MutableLiveData<String>()
     val date4 = MutableLiveData<String>()
     val score4 = MutableLiveData<String>()
     val text4 = MutableLiveData<String>()
+    val url4 = MutableLiveData<String>()
 
     //5th Post
     val comment5 = MutableLiveData<String>()
     val date5 = MutableLiveData<String>()
     val score5 = MutableLiveData<String>()
     val text5 = MutableLiveData<String>()
+    val url5 = MutableLiveData<String>()
 
     fun getSubredditInfo() {
         numbersRepository.getSubreddits().enqueue(object : Callback<Subreddit> {
@@ -60,6 +62,7 @@ class RedditViewModel : ViewModel() {
                         response.body()?.data?.children?.get(0)?.data?.created_utc?.toLong()?.let {
                             epochToDate(it)
                         }
+                    url1.value = response.body()?.data?.children?.get(0)?.data?.url.toString()
 
                     text2.value = response.body()?.data?.children?.get(1)?.data?.title
                     score2.value = response.body()?.data?.children?.get(1)?.data?.score.toString()
@@ -69,6 +72,7 @@ class RedditViewModel : ViewModel() {
                         response.body()?.data?.children?.get(1)?.data?.created_utc?.toLong()?.let {
                             epochToDate(it)
                         }
+                    url2.value = response.body()?.data?.children?.get(1)?.data?.url
 
                     text3.value = response.body()?.data?.children?.get(2)?.data?.title
                     score3.value = response.body()?.data?.children?.get(2)?.data?.score.toString()
@@ -78,6 +82,7 @@ class RedditViewModel : ViewModel() {
                         response.body()?.data?.children?.get(2)?.data?.created_utc?.toLong()?.let {
                             epochToDate(it)
                         }
+                    url3.value = response.body()?.data?.children?.get(2)?.data?.url
 
                     text4.value = response.body()?.data?.children?.get(3)?.data?.title
                     score4.value = response.body()?.data?.children?.get(3)?.data?.score.toString()
@@ -87,6 +92,7 @@ class RedditViewModel : ViewModel() {
                         response.body()?.data?.children?.get(3)?.data?.created_utc?.toLong()?.let {
                             epochToDate(it)
                         }
+                    url4.value = response.body()?.data?.children?.get(3)?.data?.url
 
                     text5.value = response.body()?.data?.children?.get(4)?.data?.title
                     score5.value = response.body()?.data?.children?.get(4)?.data?.score.toString()
@@ -96,6 +102,8 @@ class RedditViewModel : ViewModel() {
                         response.body()?.data?.children?.get(4)?.data?.created_utc?.toLong()?.let {
                             epochToDate(it)
                         }
+                    url5.value = response.body()?.data?.children?.get(4)?.data?.url
+
                 } else {
                     error.value = "An error occurred: ${response.errorBody().toString()}"
                 }
