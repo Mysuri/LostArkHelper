@@ -132,5 +132,65 @@ data class ClassSkills (
             R.drawable.c00s13,
             R.drawable.c00s07
         )
+
+        val WARLORD_SKILL_NAMES = arrayOf(
+            "Sharp Spear",
+            "Bash",
+            "Fire Bullet",
+            "Rising Spear",
+            "Dash Upper Fire",
+            "Shield Slam",
+            "Jump Attack",
+            "Guardian's Lighting",
+            "Chain Hook",
+            "Shield Charge",
+            "Charge Stinger",
+            "Shout of Hate",
+            "Turbulent Shield",
+            "Counter Sphere",
+            "Strength of Nellasia",
+            "Spear Shot",
+            "Burst Cannon"
+        )
+
+        val WARLORD_SKILL_DESCRIPTIONS = arrayOf(
+            "Normal",
+            "Normal",
+            "Normal",
+            "Normal",
+            "Combo",
+            "Combo",
+            "Point",
+            "Normal",
+            "Normal",
+            "Hold 2 sec",
+            "Charge",
+            "Normal",
+            "Normal",
+            "Normal",
+            "Normal",
+            "Normal",
+            "Normal"
+        )
+
+        val WARLORD_SKILL_IMAGES = arrayOf(
+            R.drawable.c01s00,
+            R.drawable.c01s01,
+            R.drawable.c01s06,
+            R.drawable.c01s12,
+            R.drawable.c01s10,
+            R.drawable.c01s16,
+            R.drawable.c01s05,
+            R.drawable.c01s15,
+            R.drawable.c01s14,
+            R.drawable.c01s08,
+            R.drawable.c01s03,
+            R.drawable.c01s09,
+            R.drawable.c01s02,
+            R.drawable.c01s04,
+            R.drawable.c01s11,
+            R.drawable.c01s13,
+            R.drawable.c01s07
+        )
     }
 }
