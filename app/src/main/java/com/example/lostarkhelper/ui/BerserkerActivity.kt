@@ -18,12 +18,13 @@ class BerserkerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_skills)
         val actionBar = supportActionBar
-        val className = intent.getStringExtra("className")
+        var className = intent.getStringExtra("className")
 
         if (className == null) {
             finish()
             return
         }
+
         if (actionBar != null) {
             actionBar.title = className
             //Back button
@@ -36,10 +37,118 @@ class BerserkerActivity : AppCompatActivity() {
         rvClassSkills.layoutManager = LinearLayoutManager(this)
         rvClassSkills.adapter = SkillAdapter(skills)
 
-
-        for (i in ClassSkills.SKILL_NAMES.indices) {
-            skills.add(ClassSkills(ClassSkills.SKILL_NAMES[i], ClassSkills.SKILL_DESCRIPTIONS[i], ClassSkills.SKILL_IMAGES[i]))
+        when (className) {
+            "Berserker" -> for (i in ClassSkills.BERSERKER_SKILL_NAMES.indices) {
+                skills.add(
+                    ClassSkills(
+                        ClassSkills.BERSERKER_SKILL_NAMES[i],
+                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_IMAGES[i]
+                    )
+                )
+            }
+            "Destroyer" -> for (i in ClassSkills.BERSERKER_SKILL_NAMES.indices) {
+                skills.add(
+                    ClassSkills(
+                        ClassSkills.BERSERKER_SKILL_NAMES[i],
+                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_IMAGES[i]
+                    )
+                )
+            }
+            "Warlord" -> for (i in ClassSkills.BERSERKER_SKILL_NAMES.indices) {
+                skills.add(
+                    ClassSkills(
+                        ClassSkills.BERSERKER_SKILL_NAMES[i],
+                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_IMAGES[i]
+                    )
+                )
+            }
+            "Battle Master" -> for (i in ClassSkills.BERSERKER_SKILL_NAMES.indices) {
+                skills.add(
+                    ClassSkills(
+                        ClassSkills.BERSERKER_SKILL_NAMES[i],
+                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_IMAGES[i]
+                    )
+                )
+            }
+            "Infighter" -> for (i in ClassSkills.BERSERKER_SKILL_NAMES.indices) {
+                skills.add(
+                    ClassSkills(
+                        ClassSkills.BERSERKER_SKILL_NAMES[i],
+                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_IMAGES[i]
+                    )
+                )
+            }
+            "Soul Master" -> for (i in ClassSkills.BERSERKER_SKILL_NAMES.indices) {
+                skills.add(
+                    ClassSkills(
+                        ClassSkills.BERSERKER_SKILL_NAMES[i],
+                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_IMAGES[i]
+                    )
+                )
+            }
+            "Blaster" -> for (i in ClassSkills.BERSERKER_SKILL_NAMES.indices) {
+                skills.add(
+                    ClassSkills(
+                        ClassSkills.BERSERKER_SKILL_NAMES[i],
+                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_IMAGES[i]
+                    )
+                )
+            }
+            "Devil Hunter" -> for (i in ClassSkills.BERSERKER_SKILL_NAMES.indices) {
+                skills.add(
+                    ClassSkills(
+                        ClassSkills.BERSERKER_SKILL_NAMES[i],
+                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_IMAGES[i]
+                    )
+                )
+            }
+            "Hawkeye" -> for (i in ClassSkills.BERSERKER_SKILL_NAMES.indices) {
+                skills.add(
+                    ClassSkills(
+                        ClassSkills.BERSERKER_SKILL_NAMES[i],
+                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_IMAGES[i]
+                    )
+                )
+            }
+            "Arcana" -> for (i in ClassSkills.BERSERKER_SKILL_NAMES.indices) {
+                skills.add(
+                    ClassSkills(
+                        ClassSkills.BERSERKER_SKILL_NAMES[i],
+                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_IMAGES[i]
+                    )
+                )
+            }
+            "Bard" -> for (i in ClassSkills.BERSERKER_SKILL_NAMES.indices) {
+                skills.add(
+                    ClassSkills(
+                        ClassSkills.BERSERKER_SKILL_NAMES[i],
+                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_IMAGES[i]
+                    )
+                )
+            }
+            "Summoner" -> for (i in ClassSkills.BERSERKER_SKILL_NAMES.indices) {
+                skills.add(
+                    ClassSkills(
+                        ClassSkills.BERSERKER_SKILL_NAMES[i],
+                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_IMAGES[i]
+                    )
+                )
+            }
         }
+
+
 
         berserkerAdapter.notifyDataSetChanged()
     }

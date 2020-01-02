@@ -10,7 +10,7 @@ data class ClassSkills (
 
 ) {
     companion object {
-        val SKILL_NAMES = arrayOf(
+        val BERSERKER_SKILL_NAMES = arrayOf(
             "Hazardous Crime",
             "Shoulder Charge",
             "Whirlwind",
@@ -31,7 +31,7 @@ data class ClassSkills (
             "Aurora Blade"
         )
 
-        val SKILL_DESCRIPTIONS = arrayOf(
+        val BERSERKER_SKILL_DESCRIPTIONS = arrayOf(
             "Normal",
             "Normal",
             "Hold 4 sec",
@@ -52,7 +52,7 @@ data class ClassSkills (
             "Normal"
         )
 
-        val SKILL_IMAGES = arrayOf(
+        val BERSERKER_SKILL_IMAGES = arrayOf(
             R.drawable.c02s01,
             R.drawable.c02s02,
             R.drawable.c02s03,
