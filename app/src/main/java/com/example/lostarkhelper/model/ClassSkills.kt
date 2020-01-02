@@ -114,23 +114,23 @@ data class ClassSkills (
         )
 
         val DESTROYER_SKILL_IMAGES = arrayOf(
-            R.drawable.c02s01,
-            R.drawable.c02s02,
-            R.drawable.c02s03,
-            R.drawable.c02s06,
-            R.drawable.c02s07,
-            R.drawable.c02s12,
-            R.drawable.c02s00,
-            R.drawable.c02s09,
-            R.drawable.c02s11,
-            R.drawable.c02s10,
-            R.drawable.c02s04,
-            R.drawable.c02s14,
-            R.drawable.c02s16,
-            R.drawable.c02s17,
-            R.drawable.c02s05,
-            R.drawable.c02s08,
-            R.drawable.c02s15
+            R.drawable.c00s00,
+            R.drawable.c00s01,
+            R.drawable.c00s06,
+            R.drawable.c00s12,
+            R.drawable.c00s10,
+            R.drawable.c00s16,
+            R.drawable.c00s05,
+            R.drawable.c00s15,
+            R.drawable.c00s14,
+            R.drawable.c00s08,
+            R.drawable.c00s03,
+            R.drawable.c00s09,
+            R.drawable.c00s02,
+            R.drawable.c00s04,
+            R.drawable.c00s11,
+            R.drawable.c00s13,
+            R.drawable.c00s07
         )
     }
 }
