@@ -46,10 +46,10 @@ class ClassesFragment : Fragment() {
 
 //TODO : Create action bar menu switch
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.custom_menu, menu)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
+//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+//        inflater.inflate(R.menu.custom_menu, menu)
+//        super.onCreateOptionsMenu(menu, inflater)
+//    }
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
