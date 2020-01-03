@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.row_skill.view.*
 class SkillDescriptionAdapter(private val skills: List<ClassSkills>) :
     RecyclerView.Adapter<SkillDescriptionAdapter.ViewHolder>() {
 
+    //TODO: ADD TRIPODS
     lateinit var context: Context
 
     override fun getItemCount(): Int {
@@ -44,9 +45,7 @@ class SkillDescriptionAdapter(private val skills: List<ClassSkills>) :
 
         private var customItemClickListener: CustomItemClickListener? = null
         fun bind(place: ClassSkills) {
-            itemView.ivSkillDescImage.setImageDrawable(context.getDrawable(place.imageResId))
-            itemView.tvSkillTitle.text = place.skillTitle
-            itemView.tvSkillDesc.text = place.skillStatus
+
         }
 
         override fun onClick(v: View?) {
