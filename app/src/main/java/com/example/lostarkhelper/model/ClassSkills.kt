@@ -115,7 +115,7 @@ data class ClassSkills (
             "Seismic Hammer"
         )
 
-        val DESTROYER_SKILL_DESCRIPTIONS = arrayOf(
+        val DESTROYER_SKILL_STATUS = arrayOf(
             "Normal",
             "Normal",
             "Normal",
@@ -133,6 +133,26 @@ data class ClassSkills (
             "Charge",
             "Hold",
             "Normal"
+        )
+
+        val DESTROYER_SKILL_DESCRIPTIONS = arrayOf(
+            "Infuses your hammer with gravity energy and then slams it down in front of you",
+            "You hit down to inflict 50 damage, and you create a gravity zone. The area deals 8 times 148 total damage to the enemies and draws them to its center. Then the area explodes to inflict 50 damage again.",
+            "Concentrates gravity energy within your hammer, then smashes it to the ground dealing 97 damage. Launches you into the air, dealing 123 damage to foes upon landing.",
+            "Raises your hammer and deal three brutal strikes 92-129-147 damage.",
+            "Leap high in the air towards a target location up to 10m away and inflict 250 damage to nearby foes upon landing.",
+            "Charge 5m forward, dealing 63 damage to enemies. An additional combo attack deals 187 damage with an upward strike.",
+            "Hits with 88 damage, and creates shock wave within 8m of the target location dealing 162 damage. You can use the skill 2 more times. The second hit inflicts 132 damage, and the third hit inflicts 176 damage.",
+            "While holding down the hotkey, you hit enemies in front of you, and damage up to 7 times for 317 total damage. Upon releasing the key an explosion that deals 104 damage.",
+            "Swings the hammer in front of you, dealing 28 damage. The hammer creates a gravity energy beam in front you dealing 157 total damage to enemies. They are pulled towards you and take 67 damage.",
+            "Deals 382 damage in 2m radius, you will have 15% reduction in damage and immune to control effects for 5 seconds.",
+            "Deals 154 damage. It creates a rock on the landing location. You destroy the rock and particles from the rock scatter in a fan-shaped angle, dealing 417 damage. Successful hits by the particles stun enemies for 3 seconds.",
+            "Slams the ground behind you dealing 210 damage. Then swings the hammer to the front. The first swing inflicts 46 damage, the second 59, and the third 71. After the 3 swing, you strike the ground dealing 252 damage.",
+            "Swings the hammer 3 times like whirlwind. The first and second swings inflict 76-87-190 damage in the raw. Last hit can be overcharged to 380 damage.",
+            "Swing the hammer left and right. First hit inflicts 62 damage. Continual swings increase over the time and the last hit deals 114 damage.",
+            "Moves forward and tackles an enemy for 89 damage, then hits the hammer for 400 damage. You can charge the skill for 2 seconds. When fully charged, the skill moves 2m farther and the hammer strike deals 800 damage.",
+            "Creates a black hole that deals 22 damage. You can hold gravity energy into the black hole for 2 seconds, which then spreads in all directions, dealing 201 damage. Releasing the hotkey explodes the black hole for 113, full charged black hole deals 226 damage.",
+            "Hold the hammer upside down, then leap in the air and smashing the ground for 77. After the impact, the skill creates a 5m cone-shaped wall which deals 687 damage."
         )
 
         val DESTROYER_SKILL_IMAGES = arrayOf(

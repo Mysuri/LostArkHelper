@@ -52,7 +52,7 @@ class SkillActivity : AppCompatActivity() {
                 skills.add(
                     ClassSkills(
                         ClassSkills.DESTROYER_SKILL_NAMES[i],
-                        ClassSkills.DESTROYER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.DESTROYER_SKILL_STATUS[i],
                         ClassSkills.DESTROYER_SKILL_DESCRIPTIONS[i],
                         ClassSkills.DESTROYER_SKILL_IMAGES[i]
                     )
