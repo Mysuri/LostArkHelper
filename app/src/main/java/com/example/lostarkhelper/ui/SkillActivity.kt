@@ -56,12 +56,12 @@ class SkillActivity : AppCompatActivity() {
                     )
                 )
             }
-            "Warlord" -> for (i in ClassSkills.BERSERKER_SKILL_NAMES.indices) {
+            "Warlord" -> for (i in ClassSkills.WARLORD_SKILL_NAMES.indices) {
                 skills.add(
                     ClassSkills(
-                        ClassSkills.BERSERKER_SKILL_NAMES[i],
-                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
-                        ClassSkills.BERSERKER_SKILL_IMAGES[i]
+                        ClassSkills.WARLORD_SKILL_NAMES[i],
+                        ClassSkills.WARLORD_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.WARLORD_SKILL_IMAGES[i]
                     )
                 )
             }
