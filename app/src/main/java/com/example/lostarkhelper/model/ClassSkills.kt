@@ -195,7 +195,7 @@ data class ClassSkills (
             "Burst Cannon"
         )
 
-        val WARLORD_SKILL_DESCRIPTIONS = arrayOf(
+        val WARLORD_SKILL_STATUS = arrayOf(
             "Normal",
             "Normal",
             "Normal",
@@ -213,6 +213,26 @@ data class ClassSkills (
             "Normal",
             "Normal",
             "Normal"
+        )
+
+        val WARLORD_SKILL_DESCRIPTIONS = arrayOf(
+            "You jump on 3 meters and attack cone-shaped.",
+            "Strikes an enemy with your shield for 106 damage and stuns for 3 seconds.",
+            "You shoot with your spear to deal damage to nearby enemies for 126 damage.",
+            "You pierce the ground in front of you with your spear to inflict 26 damage, then remove it, inflicting 103 damage on a line in front of you and knocking down enemies.",
+            "Rushes to a foe and lifts the target, dealing 46 damage, then follows with a combo attack dealing 183 damage.",
+            "You jump to inflict a large blow on your shield that deals 34 damage to enemies, then you can make a second shield hit by 80 damage.",
+            "Jump high in the air towards a target location, and inflict 235 damage to nearby foes upon landing.",
+            "[Lighting] Deals 295 damage to nearby enemies within 5m and electrocuted them for 3s.",
+            "Throws a chain hook to your target and deals 71 damage, then pulls your target towards you and deals 80 damage.",
+            "Charges forward dealing 37 damage each strike to foes and knocks them back.",
+            "You charge your electric energy before you quickly shoot forward to hit the enemies. You can change direction slowly while loading the skill. Dealing 204 damage before completing charge, 478 damage when taking 1st stage, and 682 damage when overcharged.",
+            "Inflicts 182 damage to a maximum of 11 enemies within 8m. This also taunts monsters for 2 seconds.",
+            "Slams with shield dealing 129 damage and slowing down enemies by 40% for 4s.",
+            "Raise your shield to defend yourself from any harmful attack in front of you for 2 seconds. Absorbs damage by an amount equal to your maximum health. Successfully defending for 1 second grants a counter attack on the enemy which deals 469 damage and knocks them back.",
+            "Reduces all damage done by you and your party members by 10% for 6 seconds in radius of 24m.",
+            "After a forward thrust, you deal 70 damage. Then pull them dealing 140 damage and knocking away with 141 damage.",
+            "Fires your cannon in front of you. When the burst is fully charged, it deals 313 damage your target and knocks them down. When not fully charged, it deals 626 damage and pushes the target back."
         )
 
         val WARLORD_SKILL_IMAGES = arrayOf(

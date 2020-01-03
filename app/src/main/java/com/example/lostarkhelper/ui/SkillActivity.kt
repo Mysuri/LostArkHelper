@@ -18,7 +18,7 @@ class SkillActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_skills)
         val actionBar = supportActionBar
-        var className = intent.getStringExtra("className")
+        val className = intent.getStringExtra("className")
 
         if (className == null) {
             finish()
@@ -62,7 +62,7 @@ class SkillActivity : AppCompatActivity() {
                 skills.add(
                     ClassSkills(
                         ClassSkills.WARLORD_SKILL_NAMES[i],
-                        ClassSkills.WARLORD_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.WARLORD_SKILL_STATUS[i],
                         ClassSkills.WARLORD_SKILL_DESCRIPTIONS[i],
                         ClassSkills.WARLORD_SKILL_IMAGES[i]
                     )
