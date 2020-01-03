@@ -12,7 +12,7 @@ import com.example.lostarkhelper.model.ClassSkills
 class SkillActivity : AppCompatActivity() {
 
     private var skills = arrayListOf<ClassSkills>()
-    private var berserkerAdapter = SkillAdapter(skills)
+    private var skillAdapter = SkillAdapter(skills)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +42,7 @@ class SkillActivity : AppCompatActivity() {
                 skills.add(
                     ClassSkills(
                         ClassSkills.BERSERKER_SKILL_NAMES[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
                         ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
                         ClassSkills.BERSERKER_SKILL_IMAGES[i]
                     )
@@ -52,6 +53,7 @@ class SkillActivity : AppCompatActivity() {
                     ClassSkills(
                         ClassSkills.DESTROYER_SKILL_NAMES[i],
                         ClassSkills.DESTROYER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.DESTROYER_SKILL_DESCRIPTIONS[i],
                         ClassSkills.DESTROYER_SKILL_IMAGES[i]
                     )
                 )
@@ -61,6 +63,7 @@ class SkillActivity : AppCompatActivity() {
                     ClassSkills(
                         ClassSkills.WARLORD_SKILL_NAMES[i],
                         ClassSkills.WARLORD_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.WARLORD_SKILL_DESCRIPTIONS[i],
                         ClassSkills.WARLORD_SKILL_IMAGES[i]
                     )
                 )
@@ -69,7 +72,8 @@ class SkillActivity : AppCompatActivity() {
                 skills.add(
                     ClassSkills(
                         ClassSkills.BERSERKER_SKILL_NAMES[i],
-                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
                         ClassSkills.BERSERKER_SKILL_IMAGES[i]
                     )
                 )
@@ -78,7 +82,8 @@ class SkillActivity : AppCompatActivity() {
                 skills.add(
                     ClassSkills(
                         ClassSkills.BERSERKER_SKILL_NAMES[i],
-                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
                         ClassSkills.BERSERKER_SKILL_IMAGES[i]
                     )
                 )
@@ -87,7 +92,8 @@ class SkillActivity : AppCompatActivity() {
                 skills.add(
                     ClassSkills(
                         ClassSkills.BERSERKER_SKILL_NAMES[i],
-                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
                         ClassSkills.BERSERKER_SKILL_IMAGES[i]
                     )
                 )
@@ -96,7 +102,8 @@ class SkillActivity : AppCompatActivity() {
                 skills.add(
                     ClassSkills(
                         ClassSkills.BERSERKER_SKILL_NAMES[i],
-                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
                         ClassSkills.BERSERKER_SKILL_IMAGES[i]
                     )
                 )
@@ -105,7 +112,8 @@ class SkillActivity : AppCompatActivity() {
                 skills.add(
                     ClassSkills(
                         ClassSkills.BERSERKER_SKILL_NAMES[i],
-                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
                         ClassSkills.BERSERKER_SKILL_IMAGES[i]
                     )
                 )
@@ -114,7 +122,8 @@ class SkillActivity : AppCompatActivity() {
                 skills.add(
                     ClassSkills(
                         ClassSkills.BERSERKER_SKILL_NAMES[i],
-                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
                         ClassSkills.BERSERKER_SKILL_IMAGES[i]
                     )
                 )
@@ -123,7 +132,8 @@ class SkillActivity : AppCompatActivity() {
                 skills.add(
                     ClassSkills(
                         ClassSkills.BERSERKER_SKILL_NAMES[i],
-                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
                         ClassSkills.BERSERKER_SKILL_IMAGES[i]
                     )
                 )
@@ -132,7 +142,8 @@ class SkillActivity : AppCompatActivity() {
                 skills.add(
                     ClassSkills(
                         ClassSkills.BERSERKER_SKILL_NAMES[i],
-                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
                         ClassSkills.BERSERKER_SKILL_IMAGES[i]
                     )
                 )
@@ -141,16 +152,15 @@ class SkillActivity : AppCompatActivity() {
                 skills.add(
                     ClassSkills(
                         ClassSkills.BERSERKER_SKILL_NAMES[i],
-                        ClassSkills.BERSERKER_SKILL_DESCRIPTIONS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
+                        ClassSkills.BERSERKER_SKILL_STATUS[i],
                         ClassSkills.BERSERKER_SKILL_IMAGES[i]
                     )
                 )
             }
         }
 
-
-
-        berserkerAdapter.notifyDataSetChanged()
+        skillAdapter.notifyDataSetChanged()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

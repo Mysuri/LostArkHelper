@@ -10,10 +10,12 @@ import com.example.lostarkhelper.R
 import com.example.lostarkhelper.model.ClassSkills
 import com.example.lostarkhelper.ui.SkillDescriptionActivity
 import com.example.lostarkhelper.util.CustomItemClickListener
+import kotlinx.android.synthetic.main.activity_skill_description.view.*
+import kotlinx.android.synthetic.main.item_skilldescription.view.*
 import kotlinx.android.synthetic.main.row_skill.view.*
 
-class SkillAdapter(private val skills: List<ClassSkills>) :
-    RecyclerView.Adapter<SkillAdapter.ViewHolder>() {
+class SkillDescriptionAdapter(private val skills: List<ClassSkills>) :
+    RecyclerView.Adapter<SkillDescriptionAdapter.ViewHolder>() {
 
     lateinit var context: Context
 
@@ -24,17 +26,6 @@ class SkillAdapter(private val skills: List<ClassSkills>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(skills[position])
 
-        holder.setOnCustomItemClickListener(object :
-            CustomItemClickListener {
-            override fun onCustomItemClickListener(view: View, position: Int) {
-                val intent = Intent(context, SkillDescriptionActivity::class.java)
-                intent.putExtra("skillImage", skills[position].imageResId)
-                intent.putExtra("skillTitle", skills[position].skillTitle)
-                intent.putExtra("skillStatus", skills[position].skillStatus)
-                intent.putExtra("skillDescription", skills[position].skillDescription)
-                context.startActivity(intent)
-            }
-        })
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -53,13 +44,9 @@ class SkillAdapter(private val skills: List<ClassSkills>) :
 
         private var customItemClickListener: CustomItemClickListener? = null
         fun bind(place: ClassSkills) {
-            itemView.ivSkill.setImageDrawable(context.getDrawable(place.imageResId))
+            itemView.ivSkillDescImage.setImageDrawable(context.getDrawable(place.imageResId))
             itemView.tvSkillTitle.text = place.skillTitle
             itemView.tvSkillDesc.text = place.skillStatus
-        }
-
-        fun setOnCustomItemClickListener(itemClickListener: CustomItemClickListener) {
-            this.customItemClickListener = itemClickListener
         }
 
         override fun onClick(v: View?) {
