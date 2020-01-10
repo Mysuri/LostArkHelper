@@ -50,6 +50,7 @@ class RedditViewModel : ViewModel() {
     val text5 = MutableLiveData<String>()
     val url5 = MutableLiveData<String>()
 
+    //TODO: Fix this trash with a recyclerview or create a function
     fun getSubredditInfo() {
         numbersRepository.getSubreddits().enqueue(object : Callback<Subreddit> {
             override fun onResponse(call: Call<Subreddit>, response: Response<Subreddit>) {
